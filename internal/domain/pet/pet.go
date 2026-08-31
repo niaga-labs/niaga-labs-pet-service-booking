@@ -107,22 +107,22 @@ func Reconstruct(
 
 // --- Getters ---
 
-func (p *Pet) ID() uuid.UUID          { return p.id }
-func (p *Pet) OwnerID() uuid.UUID     { return p.ownerID }
-func (p *Pet) Name() string           { return p.name }
-func (p *Pet) PetType() string        { return p.petType }
-func (p *Pet) Breed() string          { return p.breed }
-func (p *Pet) WeightKg() float64      { return p.weightKg }
-func (p *Pet) AgeMonths() int         { return p.ageMonths }
-func (p *Pet) Allergies() string      { return p.allergies }
-func (p *Pet) SpecialNeeds() string   { return p.specialNeeds }
-func (p *Pet) Notes() string          { return p.notes }
-func (p *Pet) PhotoURL() string       { return p.photoURL }
+func (p *Pet) ID() uuid.UUID             { return p.id }
+func (p *Pet) OwnerID() uuid.UUID        { return p.ownerID }
+func (p *Pet) Name() string              { return p.name }
+func (p *Pet) PetType() string           { return p.petType }
+func (p *Pet) Breed() string             { return p.breed }
+func (p *Pet) WeightKg() float64         { return p.weightKg }
+func (p *Pet) AgeMonths() int            { return p.ageMonths }
+func (p *Pet) Allergies() string         { return p.allergies }
+func (p *Pet) SpecialNeeds() string      { return p.specialNeeds }
+func (p *Pet) Notes() string             { return p.notes }
+func (p *Pet) PhotoURL() string          { return p.photoURL }
 func (p *Pet) VaccinationStatus() string { return p.vaccinationStatus }
-func (p *Pet) Status() PetStatus      { return p.status }
-func (p *Pet) Version() int64         { return p.version }
-func (p *Pet) CreatedAt() time.Time   { return p.createdAt }
-func (p *Pet) UpdatedAt() time.Time   { return p.updatedAt }
+func (p *Pet) Status() PetStatus         { return p.status }
+func (p *Pet) Version() int64            { return p.version }
+func (p *Pet) CreatedAt() time.Time      { return p.createdAt }
+func (p *Pet) UpdatedAt() time.Time      { return p.updatedAt }
 
 // --- Behavior ---
 

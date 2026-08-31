@@ -19,37 +19,37 @@ import (
 
 // CreateBookingRequest holds the data needed to create a new booking.
 type CreateBookingRequest struct {
-	PetSpec        dto.PetSpecDTO  `json:"pet_spec" binding:"required"`
-	PickupAddress  dto.AddressDTO  `json:"pickup_address" binding:"required"`
-	DropoffAddress dto.AddressDTO  `json:"dropoff_address" binding:"required"`
-	ScheduledAt    *time.Time      `json:"scheduled_at"`
-	Notes          string          `json:"notes"`
+	PetSpec        dto.PetSpecDTO `json:"pet_spec" binding:"required"`
+	PickupAddress  dto.AddressDTO `json:"pickup_address" binding:"required"`
+	DropoffAddress dto.AddressDTO `json:"dropoff_address" binding:"required"`
+	ScheduledAt    *time.Time     `json:"scheduled_at"`
+	Notes          string         `json:"notes"`
 }
 
 // BookingDTO is the response representation of a booking.
 type BookingDTO struct {
-	ID                  uuid.UUID              `json:"id"`
-	BookingNumber       string                 `json:"booking_number"`
-	OwnerID             uuid.UUID              `json:"owner_id"`
-	RunnerID            *uuid.UUID             `json:"runner_id,omitempty"`
-	Status              string                 `json:"status"`
-	PetSpec             bookingDomain.PetSpecification  `json:"pet_spec"`
-	CrateReq            bookingDomain.CrateRequirement  `json:"crate_requirement"`
-	PickupAddress       dto.AddressDTO         `json:"pickup_address"`
-	DropoffAddress      dto.AddressDTO         `json:"dropoff_address"`
+	ID                  uuid.UUID                         `json:"id"`
+	BookingNumber       string                            `json:"booking_number"`
+	OwnerID             uuid.UUID                         `json:"owner_id"`
+	RunnerID            *uuid.UUID                        `json:"runner_id,omitempty"`
+	Status              string                            `json:"status"`
+	PetSpec             bookingDomain.PetSpecification    `json:"pet_spec"`
+	CrateReq            bookingDomain.CrateRequirement    `json:"crate_requirement"`
+	PickupAddress       dto.AddressDTO                    `json:"pickup_address"`
+	DropoffAddress      dto.AddressDTO                    `json:"dropoff_address"`
 	RouteSpec           *bookingDomain.RouteSpecification `json:"route_spec,omitempty"`
-	EstimatedPriceCents int64                  `json:"estimated_price_cents"`
-	FinalPriceCents     *int64                 `json:"final_price_cents,omitempty"`
-	Currency            string                 `json:"currency"`
-	ScheduledAt         *time.Time             `json:"scheduled_at,omitempty"`
-	PickedUpAt          *time.Time             `json:"picked_up_at,omitempty"`
-	DeliveredAt         *time.Time             `json:"delivered_at,omitempty"`
-	CancelledAt         *time.Time             `json:"cancelled_at,omitempty"`
-	CancelNote          string                 `json:"cancel_note,omitempty"`
-	Notes               string                 `json:"notes,omitempty"`
-	Version             int64                  `json:"version"`
-	CreatedAt           time.Time              `json:"created_at"`
-	UpdatedAt           time.Time              `json:"updated_at"`
+	EstimatedPriceCents int64                             `json:"estimated_price_cents"`
+	FinalPriceCents     *int64                            `json:"final_price_cents,omitempty"`
+	Currency            string                            `json:"currency"`
+	ScheduledAt         *time.Time                        `json:"scheduled_at,omitempty"`
+	PickedUpAt          *time.Time                        `json:"picked_up_at,omitempty"`
+	DeliveredAt         *time.Time                        `json:"delivered_at,omitempty"`
+	CancelledAt         *time.Time                        `json:"cancelled_at,omitempty"`
+	CancelNote          string                            `json:"cancel_note,omitempty"`
+	Notes               string                            `json:"notes,omitempty"`
+	Version             int64                             `json:"version"`
+	CreatedAt           time.Time                         `json:"created_at"`
+	UpdatedAt           time.Time                         `json:"updated_at"`
 }
 
 // BookingService is the application service orchestrating booking use cases.

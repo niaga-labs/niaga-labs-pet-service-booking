@@ -70,10 +70,10 @@ func Reconstruct(id, bookingID, runnerID uuid.UUID, photoType PhotoType, photoUR
 
 // Getters.
 func (p *BookingPhoto) ID() uuid.UUID        { return p.id }
-func (p *BookingPhoto) BookingID() uuid.UUID  { return p.bookingID }
-func (p *BookingPhoto) RunnerID() uuid.UUID   { return p.runnerID }
-func (p *BookingPhoto) PhotoType() PhotoType  { return p.photoType }
-func (p *BookingPhoto) PhotoURL() string      { return p.photoURL }
-func (p *BookingPhoto) Caption() string       { return p.caption }
-func (p *BookingPhoto) TakenAt() time.Time    { return p.takenAt }
-func (p *BookingPhoto) CreatedAt() time.Time  { return p.createdAt }
+func (p *BookingPhoto) BookingID() uuid.UUID { return p.bookingID }
+func (p *BookingPhoto) RunnerID() uuid.UUID  { return p.runnerID }
+func (p *BookingPhoto) PhotoType() PhotoType { return p.photoType }
+func (p *BookingPhoto) PhotoURL() string     { return p.photoURL }
+func (p *BookingPhoto) Caption() string      { return p.caption }
+func (p *BookingPhoto) TakenAt() time.Time   { return p.takenAt }
+func (p *BookingPhoto) CreatedAt() time.Time { return p.createdAt }

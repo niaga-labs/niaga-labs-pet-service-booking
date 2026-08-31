@@ -61,7 +61,13 @@ func main() {
 
 	// Run database migrations
 	if cfg.AppEnv == "development" {
-		if err := db.AutoMigrate(&repository.BookingModel{}, &repository.PetModel{}, &repository.PhotoModel{}); err != nil {
+		// PetModel and PhotoModel are intentionally omitted -- the SQL migrations
+		// own "pets" and "booking_photos" now. KPD-57: they used to exist ONLY on
+		// this branch, so they were missing everywhere that runs the SQL migrations
+		// instead, which would have put epic KPD-7 (Pets CRUD) on a table that only
+		// existed on a developer laptop. DeclineReasonModel was already left to SQL
+		// for the same reason.
+		if err := db.AutoMigrate(&repository.BookingModel{}); err != nil {
 			log.Fatal("failed to run auto-migration", zap.Error(err))
 		}
 		log.Info("database migration completed (dev auto-migrate)")

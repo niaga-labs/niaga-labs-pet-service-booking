@@ -91,13 +91,16 @@ go run ./cmd/migrate
 go run ./cmd/server
 ```
 
-### Two migration modes
+### Migrations
 
-`cmd/migrate` always applies the golang-migrate files in `migrations/` and is the
-source of truth for the schema. The server additionally auto-migrates a subset of
-the GORM models when `APP_ENV=development`; `DeclineReasonModel` is deliberately left
-out of that list, because GORM renames the unique constraint on `booking_decline_reasons`
-away from the name the SQL migration gives it. Prefer `cmd/migrate`.
+`migrations/` is the single source of truth for the schema, in every environment including
+development. `cmd/migrate` applies the files and exits; `cmd/server` applies them at startup
+too, so a fresh boot is self-sufficient.
+
+There is deliberately no GORM `AutoMigrate` path. `DeclineReasonModel` was already left to SQL
+because GORM renamed its unique constraint, and `pets` / `booking_photos` had no SQL migration
+at all, so they existed only on a developer laptop (KPD-57). One path for all environments
+removes that class of drift.
 
 The service will start on port 8001.
 

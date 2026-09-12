@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/auth"
-	"github.com/Kilat-Pet-Delivery/lib-common/middleware"
-	"github.com/Kilat-Pet-Delivery/lib-common/response"
-	"github.com/Kilat-Pet-Delivery/service-booking/internal/application"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/auth"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/middleware"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/response"
+	"github.com/niaga-labs/niaga-labs-pet-service-booking/internal/application"
 )
 
 // BookingHandler handles HTTP requests for booking operations.

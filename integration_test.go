@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-proto/events"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-proto/events"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Kilat-Pet-Delivery/service-booking/internal/repository"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-service-booking/internal/repository"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

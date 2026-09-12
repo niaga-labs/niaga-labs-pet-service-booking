@@ -4,9 +4,9 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/kafka"
-	"github.com/Kilat-Pet-Delivery/lib-proto/events"
-	"github.com/Kilat-Pet-Delivery/service-booking/internal/application"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/kafka"
+	"github.com/niaga-labs/niaga-labs-pet-lib-proto/events"
+	"github.com/niaga-labs/niaga-labs-pet-service-booking/internal/application"
 	kafkago "github.com/segmentio/kafka-go"
 	"go.uber.org/zap"
 )

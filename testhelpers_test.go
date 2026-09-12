@@ -36,8 +36,8 @@ type testInfra struct {
 
 // bookingStack holds wired-up booking service components.
 type bookingStack struct {
-	Service        *application.BookingService
-	Consumer       *bookingEvents.PaymentEventConsumer
+	Service         *application.BookingService
+	Consumer        *bookingEvents.PaymentEventConsumer
 	CleanupProducer func()
 }
 

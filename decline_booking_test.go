@@ -14,9 +14,9 @@ import (
 
 	"github.com/Kilat-Pet-Delivery/lib-common/auth"
 	"github.com/Kilat-Pet-Delivery/service-booking/internal/application"
+	bookingDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/booking"
 	"github.com/Kilat-Pet-Delivery/service-booking/internal/handler"
 	"github.com/Kilat-Pet-Delivery/service-booking/internal/repository"
-	bookingDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/booking"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
@@ -317,4 +317,3 @@ func TestDeclineBooking_AlreadyInProgress_Returns409(t *testing.T) {
 
 	assert.Equal(t, http.StatusConflict, w.Code, "expected 409, got: %s", w.Body.String())
 }
-

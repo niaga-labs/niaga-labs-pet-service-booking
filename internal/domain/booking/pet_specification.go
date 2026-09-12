@@ -44,14 +44,14 @@ func (c CrateSize) IsValid() bool {
 
 // PetSpecification is an immutable value object describing the pet to be transported.
 type PetSpecification struct {
-	PetType      string             `json:"pet_type"`
-	Breed        string             `json:"breed"`
-	Name         string             `json:"name"`
-	WeightKg     float64            `json:"weight_kg"`
-	Age          int                `json:"age_months"`
+	PetType      string              `json:"pet_type"`
+	Breed        string              `json:"breed"`
+	Name         string              `json:"name"`
+	WeightKg     float64             `json:"weight_kg"`
+	Age          int                 `json:"age_months"`
 	Vaccinations []VaccinationRecord `json:"vaccinations"`
-	SpecialNeeds string             `json:"special_needs"`
-	PhotoURL     string             `json:"photo_url"`
+	SpecialNeeds string              `json:"special_needs"`
+	PhotoURL     string              `json:"photo_url"`
 }
 
 // VaccinationRecord represents a single vaccination entry for a pet.
@@ -65,10 +65,10 @@ type VaccinationRecord struct {
 
 // CrateRequirement describes the minimum crate specifications needed for a pet.
 type CrateRequirement struct {
-	MinimumSize            CrateSize `json:"minimum_size"`
-	NeedsVentilation       bool      `json:"needs_ventilation"`
-	NeedsTempControl       bool      `json:"needs_temp_control"`
-	MinimumWeightCapacity  float64   `json:"minimum_weight_capacity"`
+	MinimumSize           CrateSize `json:"minimum_size"`
+	NeedsVentilation      bool      `json:"needs_ventilation"`
+	NeedsTempControl      bool      `json:"needs_temp_control"`
+	MinimumWeightCapacity float64   `json:"minimum_weight_capacity"`
 }
 
 // DetermineCrateRequirement automatically determines the crate requirements based on pet specs.

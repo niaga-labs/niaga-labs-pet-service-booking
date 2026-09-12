@@ -59,17 +59,19 @@ func main() {
 		log.Fatal("failed to connect to database", zap.Error(err))
 	}
 
-	// Run database migrations
-	if cfg.AppEnv == "development" {
-		if err := db.AutoMigrate(&repository.BookingModel{}, &repository.PetModel{}, &repository.PhotoModel{}); err != nil {
-			log.Fatal("failed to run auto-migration", zap.Error(err))
-		}
-		log.Info("database migration completed (dev auto-migrate)")
-	} else {
-		dbURL := dbConfig.DatabaseURL()
-		if err := database.RunMigrations(dbURL, "migrations", log); err != nil {
-			log.Fatal("failed to run migrations", zap.Error(err))
-		}
+	// Run database migrations.
+	//
+	// KPD-57: this used to AutoMigrate in development and run the SQL migrations
+	// everywhere else. pets and booking_photos had no SQL migration, so they
+	// existed only in development -- which would have put epic KPD-7 (Pets CRUD)
+	// on a table that does not exist off a developer laptop. Now that 004 and 005
+	// cover them, every model in this service has a SQL migration, so there is one
+	// path for all environments and the two can no longer drift apart.
+	// Development still gets its schema automatically, because the server applies
+	// the migrations at startup.
+	dbURL := dbConfig.DatabaseURL()
+	if err := database.RunMigrations(dbURL, "migrations", log); err != nil {
+		log.Fatal("failed to run migrations", zap.Error(err))
 	}
 
 	// Initialize JWT manager

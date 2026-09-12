@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/kafka"
-	"github.com/Kilat-Pet-Delivery/service-booking/internal/application"
-	bookingDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/booking"
-	bookingEvents "github.com/Kilat-Pet-Delivery/service-booking/internal/events"
-	"github.com/Kilat-Pet-Delivery/service-booking/internal/repository"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/kafka"
+	"github.com/niaga-labs/niaga-labs-pet-service-booking/internal/application"
+	bookingDomain "github.com/niaga-labs/niaga-labs-pet-service-booking/internal/domain/booking"
+	bookingEvents "github.com/niaga-labs/niaga-labs-pet-service-booking/internal/events"
+	"github.com/niaga-labs/niaga-labs-pet-service-booking/internal/repository"
 	"net"
 
 	"github.com/google/uuid"

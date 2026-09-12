@@ -6,9 +6,9 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/domain"
-	"github.com/Kilat-Pet-Delivery/lib-proto/dto"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/domain"
+	"github.com/niaga-labs/niaga-labs-pet-lib-proto/dto"
 )
 
 const bookingNumberChars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"

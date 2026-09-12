@@ -1,7 +1,7 @@
 # Kilat Pet Delivery - service-booking
 
 The booking aggregate and its state machine: create, accept, decline, pick up, deliver, cancel, rebook - plus owner pet profiles and proof-of-delivery photos. Prices each route on creation.
-Jira project **KPD** - GitHub `Kilat-Pet-Delivery/service-booking` - stack **Go 1.24 - Gin - GORM - PostgreSQL - Kafka**. Global rules live in `~/.claude/`;
+Jira project **KPD** - GitHub `niaga-labs/niaga-labs-pet-service-booking` - stack **Go 1.24 - Gin - GORM - PostgreSQL - Kafka**. Global rules live in `~/.claude/`;
 this file only adds what is specific here.
 
 ## Orient here first

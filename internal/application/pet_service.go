@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/domain"
-	petDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/pet"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/domain"
+	petDomain "github.com/niaga-labs/niaga-labs-pet-service-booking/internal/domain/pet"
 	"go.uber.org/zap"
 )
 

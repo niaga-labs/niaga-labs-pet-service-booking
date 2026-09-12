@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/domain"
-	"github.com/Kilat-Pet-Delivery/lib-proto/dto"
-	bookingDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/booking"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/domain"
+	"github.com/niaga-labs/niaga-labs-pet-lib-proto/dto"
+	bookingDomain "github.com/niaga-labs/niaga-labs-pet-service-booking/internal/domain/booking"
 	"gorm.io/gorm"
 )
 

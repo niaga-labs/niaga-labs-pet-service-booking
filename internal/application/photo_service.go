@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	photoDomain "github.com/Kilat-Pet-Delivery/service-booking/internal/domain/photo"
 	"github.com/google/uuid"
+	photoDomain "github.com/niaga-labs/niaga-labs-pet-service-booking/internal/domain/photo"
 	"go.uber.org/zap"
 )
 

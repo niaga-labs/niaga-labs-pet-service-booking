@@ -3,12 +3,12 @@ package handler
 import (
 	"net/http"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/domain"
-	"github.com/Kilat-Pet-Delivery/lib-common/middleware"
-	"github.com/Kilat-Pet-Delivery/lib-common/response"
-	"github.com/Kilat-Pet-Delivery/lib-proto/dto"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/domain"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/middleware"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/response"
+	"github.com/niaga-labs/niaga-labs-pet-lib-proto/dto"
 )
 
 // DeclineBooking handles POST /api/v1/bookings/:id/decline.
